@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  jmx:
+    enabled: false
+  devtools:
+    restart:
+      enabled: false
+
+  datasource:
+    url: jdbc:oracle:thin:@219.216.86.148:1521:ORCL
+    username: lndata
+    password: lndata
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    jmx-enabled: false
+    tomcat:
+      initial-size: 1
+      max-active: 20
+      ## when pool sweeper is enabled, extra idle connection will be closed
+      max-idle: 5
+      ## when idle connection > min-idle, poolSweeper will start to close
+      min-idle: 1
+
+jdbcType: oracle
